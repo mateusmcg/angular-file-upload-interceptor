@@ -10,7 +10,7 @@ A versão original pode ser encontrada em: https://github.com/nervgh/angular-fil
 
 Quando os arquivos são selecionado ou arrastados (drag-n-drop) para o componente, um ou mais filtros são aplicados. Os arquivos que forem válidos para os filtros são adicionados à fila. Para cada um destes que foram adicionados na fila é criado uma instância de `{FileItem}` e as configurações do uploader são copiadas para este objeto. Por fim, os itens adicionados na fila (FileItems) estão prontos para o upload.
 
-## Mudanças da versão 'br'
+## Mudanças da versão 'interceptor'
 Agora o mecanismo dá suporte para interceptors do AngularJs, através do $httpProvider, para que sua aplicação possa manipular as requisições de upload da forma que preferir.
 
 Você pode encontrar este módulo no bower pelo nome: [angular-file-upload-br] ou pelo link: (http://bower.io/search/?q=angular-file-upload-br)
