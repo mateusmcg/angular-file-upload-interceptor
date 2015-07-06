@@ -1,14 +1,19 @@
 # Angular File Upload
 
+A versão original pode ser encontrada em: https://github.com/nervgh/angular-file-upload
+
 ---
 
-## About
+## Sobre
 
-**Angular File Upload** is a module for the [AngularJS](http://angularjs.org/) framework. Supports drag-n-drop upload, upload progress, validation filters and a file upload queue. It supports native HTML5 uploads, but degrades to a legacy iframe upload method for older browsers. Works with any server side platform which supports standard HTML form uploads.
+**Angular File Upload** é um módulo para o framework [AngularJS](http://angularjs.org/). Suporta upload arrastando e soltando os arquivos, barra de progresso, filtros de validação e uma fila de arquivos para upload. Suporta uploads em HTML5 nativo, mas para navegadores mais antigos o mecanismo utiliza o método legado iframe de upload. Funciona em qualquer plataforma server-side que suporta padrões de HTML form para upload. 
 
-When files are selected or dropped into the component, one or more filters are applied. Files which pass all filters are added to the queue. When file is added to the queue, for him is created instance of `{FileItem}` and uploader options are copied into this object. After, items in the queue (FileItems) are ready for uploading.
+Quando os arquivos são selecionado ou arrastados (drag-n-drop) para o componente, um ou mais filtros são aplicados. Os arquivos que forem válidos para os filtros são adicionados à fila. Para cada um destes que foram adicionados na fila é criado uma instância de `{FileItem}` e as configurações do uploader são copiadas para este objeto. Por fim, os itens adicionados na fila (FileItems) estão prontos para o upload.
 
-You could find this module in bower like [_angular file upload_](http://bower.io/search/?q=angular%20file).
+## Mudanças da versão 'br'
+Agora o mecanismo dá suporte para interceptors do AngularJs, através do $httpProvider, para que sua aplicação possa manipular as requisições de upload da forma que preferir.
+
+Você pode encontrar este módulo no bower pelo nome: [angular-file-upload-br] ou pelo link: (http://bower.io/search/?q=angular-file-upload-br)
 
 ## Demos
 1. [Simple example](http://nervgh.github.io/pages/angular-file-upload/examples/simple)
