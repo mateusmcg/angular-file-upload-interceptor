@@ -16,15 +16,15 @@ module.exports = (grunt) ->
         clean:
             working:
                 src: [
-                    'angular-file-upload-br.*'
+                    'angular-file-upload-interceptor.*'
                 ]
 
         uglify:
 
             # concat js files before minification
             js:
-                src: ['angular-file-upload-br.js']
-                dest: 'angular-file-upload-br.min.js'
+                src: ['angular-file-upload-interceptor.js']
+                dest: 'angular-file-upload-interceptor.min.js'
                 options:
                     banner: '<%= banner %>'
                     sourceMap: (fileName) ->
@@ -41,7 +41,7 @@ module.exports = (grunt) ->
                     'src/module.js',
                     'src/outro.js'
                 ]
-                dest: 'angular-file-upload-br.js'
+                dest: 'angular-file-upload-interceptor.js'
 
     # Register grunt tasks supplied by grunt-contrib-*.
     # Referenced in package.json.

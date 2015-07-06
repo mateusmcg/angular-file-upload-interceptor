@@ -1,5 +1,5 @@
 /*
- angular-file-upload-br v1.1.15br
+ angular-file-upload-br v1.0.0
  https://github.com/mateusmcg/angular-file-upload-br
 */
 (function(angular, factory) {
