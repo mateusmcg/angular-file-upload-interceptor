@@ -13,7 +13,7 @@ Quando os arquivos são selecionado ou arrastados (drag-n-drop) para o component
 ## Mudanças da versão 'interceptor'
 Agora o mecanismo dá suporte para interceptors do AngularJs, através do $httpProvider, para que sua aplicação possa manipular as requisições de upload da forma que preferir.
 
-Você pode encontrar este módulo no bower pelo nome: [angular-file-upload-br] ou pelo link: (http://bower.io/search/?q=angular-file-upload-br)
+Você pode encontrar este módulo no bower pelo nome: [angular-file-upload-interceptor] ou pelo link: (http://bower.io/search/?q=angular-file-upload-interceptor)
 
 ## Demos
 1. [Simple example](http://nervgh.github.io/pages/angular-file-upload/examples/simple)
