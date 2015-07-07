@@ -1,6 +1,6 @@
 /*
- angular-file-upload-br v1.0.0
- https://github.com/mateusmcg/angular-file-upload-br
+ angular-file-upload-interceptor v1.0.0
+ https://github.com/mateusmcg/angular-file-upload-interceptor
 */
 (function(angular, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -52,7 +52,7 @@ module
         $httpProviderInstance = $httpProvider;
     }])
 
-    .factory('FileUploader', ['fileUploaderOptions', '$rootScope', '$http', '$window', '$compile',
+    .factory('FileUploader', ['fileUploaderOptions', '$rootScope', '$http', '$window', '$compile', '$injector',
         function (fileUploaderOptions, $rootScope, $http, $window, $compile, $injector) {
             /**
              * Creates an instance of FileUploader
