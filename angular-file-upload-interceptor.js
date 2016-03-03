@@ -477,6 +477,7 @@ module
                 var xhr = item._xhr = new XMLHttpRequest();
                 var form = new FormData();
                 var that = this;
+                var isLoadingModalOpen = false;
 
                 that._onBeforeUploadItem(item);
 
@@ -502,7 +503,7 @@ module
                     that[method](item, response, xhr.status, headers);
                     that._onCompleteItem(item, response, xhr.status, headers);
 
-                    var resp = { data: response, config: { headers: headers, params: form, url: item.url, method: item.method }, status: xhr.status };
+                    var resp = { data: response, config: { headers: headers, params: form, url: item.url, method: item.method, openLoadingModal: isLoadingModalOpen }, status: xhr.status };
 
                     injectResponseInterceptors(gist, resp);
                 };
@@ -535,8 +536,10 @@ module
 
                 angular.forEach($httpProviderInstance.interceptors, function (interceptorName) {
                     var interceptor = _.isString(interceptorName) ? $injector.get(interceptorName) : $injector.invoke(interceptorName);
-                    if (interceptor.request)
+                    if (interceptor.request){
                         interceptor.request(config);
+                        isLoadingModalOpen = config.openLoadingModal;
+                    }
                 });
 
                 angular.forEach(config.headers, function (value, name) {
